@@ -156,6 +156,11 @@ class PugClassDefinitionProvider implements vscode.DefinitionProvider {
 export function activate(context: vscode.ExtensionContext) {
 	const provider = new PugClassDefinitionProvider();
 
+	// ハイフンを含むクラス名をひとつの単語として扱う（cmd+クリック時のアンダーライン範囲修正）
+	const wordPattern = /[\w-]+/;
+	vscode.languages.setLanguageConfiguration('pug', { wordPattern });
+	vscode.languages.setLanguageConfiguration('jade', { wordPattern });
+
 	context.subscriptions.push(
 		vscode.languages.registerDefinitionProvider(
 			{ language: 'jade' },
