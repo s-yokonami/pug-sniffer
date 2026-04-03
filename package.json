@@ -23,6 +23,11 @@
           "type": "string",
           "default": "src/assets/**/*.scss",
           "description": "SCSS ファイルを検索する glob パターン"
+        },
+        "pugSniffer.pugGlob": {
+          "type": "string",
+          "default": "src/**/*.pug",
+          "description": "Pug ファイルを検索する glob パターン（mixin 定義の探索用）"
         }
       }
     }
