@@ -3,7 +3,13 @@
   "displayName": "Pug Sniffer",
   "description": "クンクン嗅ぎ回って、目当てのSCSS定義を探し当てる",
   "version": "0.0.1",
+  "publisher": "s-yokonami",
   "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-yokonami/pug-sniffer.git"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.110.0"
   },
@@ -21,7 +27,7 @@
       "properties": {
         "pugSniffer.scssGlob": {
           "type": "string",
-          "default": "src/assets/**/*.scss",
+          "default": "src/**/*.scss",
           "description": "SCSS ファイルを検索する glob パターン"
         },
         "pugSniffer.pugGlob": {
